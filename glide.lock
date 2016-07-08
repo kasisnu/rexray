@@ -1,5 +1,5 @@
-hash: 9b18e8ed63ea7ccc4d9b9635a5aea51c923917917eae600bd313e7b46999af60
-updated: 2016-06-20T22:25:55.503765359-05:00
+hash: 2ad8d359bf8926ab3510b33caee9487570d66ba72949f8085c63c90320d3c2cf
+updated: 2016-07-08T15:22:01.225661435+05:30
 imports:
 - name: github.com/akutz/gofig
   version: 697c16916338166671910eeaccc50f21e3c10726
@@ -19,6 +19,30 @@ imports:
   - virtualboxclient
 - name: github.com/asaskevich/govalidator
   version: df81827fdd59d8b4fb93d8910b286ab7a3919520
+- name: github.com/aws/aws-sdk-go
+  version: caee6e866bf437a6bef0777a3bf141cdd3aa022d
+  repo: https://github.com/aws/aws-sdk-go
+  subpackages:
+  - aws
+  - aws/credentials
+  - aws/credentials/ec2rolecreds
+  - aws/ec2metadata
+  - aws/session
+  - service/efs
+  - aws/awserr
+  - aws/client
+  - aws/client/metadata
+  - aws/request
+  - aws/corehandlers
+  - aws/defaults
+  - private/endpoints
+  - aws/awsutil
+  - aws/signer/v4
+  - private/protocol
+  - private/protocol/restjson
+  - private/protocol/rest
+  - private/protocol/jsonrpc
+  - private/protocol/json/jsonutil
 - name: github.com/BurntSushi/toml
   version: f0aeabca5a127c4078abb8c8d64298b147264b55
 - name: github.com/cesanta/ucl
@@ -36,19 +60,20 @@ imports:
   subpackages:
   - api/v1
 - name: github.com/emccode/goscaleio
-  version: 53ea76f52205380ab52b9c1f4ad89321c286bb95
+  version: 9d95003c0069b1949a0fb46832870799caa5c360
   repo: https://github.com/emccode/goscaleio
   subpackages:
   - types/v1
 - name: github.com/emccode/libstorage
-  version: 182a626937677a081b89651598ee2eac839308e7
+  version: e1a796bddbe17ae2106b63aad6e640bbe603dc44
+  repo: https://github.com/mhrabovcin/libstorage
   subpackages:
   - imports/local
   - imports/remote
   - api/types
   - client
-  - api/context
   - api/utils
+  - api/context
   - api/server
   - api
   - drivers/integration/docker
@@ -57,6 +82,7 @@ imports:
   - drivers/storage/libstorage
   - drivers/storage/vfs/client
   - imports/config
+  - drivers/storage/efs/storage
   - drivers/storage/isilon/storage
   - drivers/storage/scaleio/storage
   - drivers/storage/vbox/storage
@@ -68,6 +94,7 @@ imports:
   - imports/routers
   - api/client
   - drivers/storage/vfs
+  - drivers/storage/efs
   - drivers/storage/isilon
   - drivers/storage/scaleio
   - drivers/storage/vbox
@@ -82,17 +109,19 @@ imports:
   - api/server/router/volume
   - api/server/executors
   - api/utils/filters
+- name: github.com/go-ini/ini
+  version: 927d8d7ced542ab92df77ac1637b6e56336ee0dd
 - name: github.com/go-yaml/yaml
   version: b4a9f8c4b84c6c4256d669c649837f1441e4b050
   repo: https://github.com/akutz/yaml.git
 - name: github.com/gorilla/context
   version: aed02d124ae4a0e94fea4541c8effd05bf0c8296
-- name: github.com/gorilla/handlers
-  version: 66e6c6f01d8da976ee113437745ca029c2b585a6
 - name: github.com/gorilla/mux
   version: 9fa818a44c2bf1396a17f9d5a3c0f6dd39d2ff8e
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/jmespath/go-jmespath
+  version: 0b12d6b521d83fc7f755e7cfc1b1fbdd35a01a74
 - name: github.com/jteeuwen/go-bindata
   version: 1dd44b25b79c4d9060e582e90798e4d72537818c
   repo: https://github.com/akutz/go-bindata
