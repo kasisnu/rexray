@@ -72,8 +72,8 @@ imports:
   subpackages:
   - logrus
 - name: github.com/emccode/libstorage
-  version: 2f7210c90252a4e1c9fb011ba29158cb0facb516
-  repo: https://github.com/emccode/libstorage
+  version: 84ca830e9fb65692ebef34a1ae5cf7204169a77a
+  repo: https://github.com/acquia/libstorage
   subpackages:
   - imports/local
   - imports/remote
@@ -91,6 +91,7 @@ imports:
   - imports/config
   - drivers/storage/efs/storage
   - drivers/storage/isilon/storage
+  - drivers/storage/objectivefs/storage
   - drivers/storage/scaleio/storage
   - drivers/storage/vbox/storage
   - drivers/storage/vfs/storage
