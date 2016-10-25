@@ -24,30 +24,33 @@ imports:
   repo: https://github.com/aws/aws-sdk-go
   subpackages:
   - aws
-  - aws/awserr
-  - aws/awsutil
-  - aws/client
-  - aws/client/metadata
-  - aws/corehandlers
   - aws/credentials
   - aws/credentials/ec2rolecreds
-  - aws/defaults
   - aws/ec2metadata
-  - aws/request
   - aws/session
-  - aws/signer/v4
+  - service/ec2
+  - aws/awserr
+  - service/efs
+  - service/s3
+  - aws/client
+  - aws/client/metadata
+  - aws/request
+  - aws/corehandlers
+  - aws/defaults
   - private/endpoints
+  - aws/awsutil
+  - aws/signer/v4
   - private/protocol
   - private/protocol/ec2query
-  - private/protocol/json/jsonutil
-  - private/protocol/jsonrpc
-  - private/protocol/query/queryutil
-  - private/protocol/rest
-  - private/protocol/restjson
-  - private/protocol/xml/xmlutil
   - private/waiter
-  - service/ec2
-  - service/efs
+  - private/protocol/restjson
+  - private/protocol/restxml
+  - private/protocol/rest
+  - private/protocol/query/queryutil
+  - private/protocol/xml/xmlutil
+  - private/protocol/jsonrpc
+  - private/protocol/query
+  - private/protocol/json/jsonutil
 - name: github.com/BurntSushi/toml
   version: 99064174e013895bbd9b025c31100bd1d9b590ca
 - name: github.com/cesanta/ucl
@@ -60,13 +63,12 @@ imports:
   version: 2ea94fb4dd4f34507c9d67d8d2e35dcc0edb5f89
   subpackages:
   - api
-  - api/json
   - api/v1
   - api/v2
 - name: github.com/codedellemc/goscaleio
   version: 485da3636bfcc8e70f74fe7bdc7cb25e5a6e4c4a
+  - api/json
   subpackages:
-  - tls
   - types/v1
 - name: github.com/codedellemc/gournal
   version: 4293aaf7e91602963a5777caef4b346e1cf21936
@@ -76,49 +78,31 @@ imports:
   version: 96e6a3a257dccbbd07b13d8b02e06bd9a4ed2ae9
   repo: https://github.com/codedellemc/libstorage
   subpackages:
-  - api
-  - api/client
+  - imports/local
+  - imports/remote
   - api/context
-  - api/registry
   - api/server
-  - api/server/executors
-  - api/server/handlers
-  - api/server/httputils
-  - api/server/router/executor
-  - api/server/router/help
-  - api/server/router/root
-  - api/server/router/service
-  - api/server/router/snapshot
-  - api/server/router/tasks
-  - api/server/router/volume
-  - api/server/services
   - api/types
   - api/utils
-  - api/utils/config
-  - api/utils/filters
-  - api/utils/schema
   - client
+  - api
   - drivers/integration/docker
   - drivers/os/darwin
   - drivers/os/linux
-  - drivers/storage/ebs
-  - drivers/storage/ebs/storage
-  - drivers/storage/ebs/utils
-  - drivers/storage/efs
-  - drivers/storage/efs/storage
-  - drivers/storage/isilon
-  - drivers/storage/isilon/storage
   - drivers/storage/libstorage
-  - drivers/storage/scaleio
-  - drivers/storage/scaleio/storage
-  - drivers/storage/vbox
-  - drivers/storage/vbox/storage
-  - drivers/storage/vfs
   - drivers/storage/vfs/client
-  - drivers/storage/vfs/storage
   - imports/config
-  - imports/local
-  - imports/remote
+  - drivers/storage/ebs/storage
+  - drivers/storage/efs/storage
+  - drivers/storage/isilon/storage
+  - drivers/storage/objectivefs/storage
+  - drivers/storage/scaleio/storage
+  - drivers/storage/vbox/storage
+  - drivers/storage/vfs/storage
+  - api/registry
+  - api/server/handlers
+  - api/server/services
+  - api/utils/config
   - imports/routers
 - name: github.com/cpuguy83/go-md2man
   version: a65d4d2de4d5f7c74868dfa9b202a3c8be315aaa

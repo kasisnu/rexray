@@ -575,7 +575,9 @@ ifneq ($(V_BUILD),)
 				V_SEMVER := $(V_SEMVER)-$(V_NOTES)
 			endif
 		endif
-		V_SEMVER := $(V_SEMVER)+$(V_BUILD)
+		# This is intentionally disabled in order to get desired package version format
+		# without +(n) number in final version string
+		# V_SEMVER := $(V_SEMVER)+$(V_BUILD)
 	endif
 endif
 ifeq ($(V_DIRTY),dirty)
